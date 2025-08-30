@@ -48,13 +48,14 @@ const IronManDashboard = () => {
           </h1>
         </div>
 
-        {/* Iron Man Logo */}
+        {/* Photo Placeholder */}
         <div className="text-center mb-8">
-          <img
-            src={ironManLogo}
-            alt="Iron Man Campaign Logo"
-            className="mx-auto w-32 h-32 iron-man-glow"
-          />
+          <div className="mx-auto w-32 h-32 rounded-full bg-muted border-2 border-dashed border-muted-foreground flex items-center justify-center">
+            <div className="text-center">
+              <div className="text-2xl text-muted-foreground mb-1">📷</div>
+              <div className="text-xs text-muted-foreground">Photo</div>
+            </div>
+          </div>
           <p className="text-foreground font-medium mt-4 tracking-wide">
             Learn. Win. Keep learning!
           </p>
