@@ -18,7 +18,7 @@ const IronManDashboard = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="bg-background text-foreground p-6">
       {/* Header with Auth buttons */}
       <header className="p-6">
         <div className="flex items-start justify-start gap-4">

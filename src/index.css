@@ -123,4 +123,13 @@ All colors MUST be HSL.
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
   }
+
+  .menu-item-hover {
+    @apply transition-all duration-300 ease-in-out;
+  }
+
+  .menu-item-hover:hover {
+    color: hsl(210 100% 56%);
+    text-shadow: 0 0 8px hsl(210 100% 56% / 0.8), 0 0 16px hsl(210 100% 56% / 0.4);
+  }
 }
