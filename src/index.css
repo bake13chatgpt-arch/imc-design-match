@@ -126,10 +126,20 @@ All colors MUST be HSL.
 
   .menu-item-hover {
     @apply transition-all duration-300 ease-in-out;
+    background: transparent !important;
   }
 
   .menu-item-hover:hover {
-    color: hsl(210 100% 56%);
+    color: hsl(210 100% 56%) !important;
     text-shadow: 0 0 8px hsl(210 100% 56% / 0.8), 0 0 16px hsl(210 100% 56% / 0.4);
+    background: transparent !important;
+  }
+
+  .menu-item-hover:focus {
+    background: transparent !important;
+  }
+
+  .menu-item-hover:active {
+    background: transparent !important;
   }
 }
