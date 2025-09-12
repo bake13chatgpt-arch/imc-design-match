@@ -1,24 +1,22 @@
-import { useState } from "react"
-import { useNavigate } from "react-router-dom"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { EditProfileDialog } from "./EditProfileDialog"
-
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { EditProfileDialog } from "./EditProfileDialog";
 interface ProfileCardProps {
-  profileData: any
-  onProfileUpdate: (data: any) => void
+  profileData: any;
+  onProfileUpdate: (data: any) => void;
 }
-
-export function ProfileCard({ profileData, onProfileUpdate }: ProfileCardProps) {
-  const [isEditDialogOpen, setIsEditDialogOpen] = useState(false)
-  const navigate = useNavigate()
-
+export function ProfileCard({
+  profileData,
+  onProfileUpdate
+}: ProfileCardProps) {
+  const [isEditDialogOpen, setIsEditDialogOpen] = useState(false);
+  const navigate = useNavigate();
   const handleUserHistory = () => {
-    navigate("/history")
-  }
-
-  return (
-    <div className="space-y-6">
+    navigate("/history");
+  };
+  return <div className="space-y-6">
       {/* Profile Information Card */}
       <Card className="bg-card/80 backdrop-blur">
         <CardHeader className="text-center">
@@ -54,7 +52,7 @@ export function ProfileCard({ profileData, onProfileUpdate }: ProfileCardProps) 
 
           {/* Rank Stars */}
           <div className="flex justify-center space-x-1 my-4">
-            <span className="text-red-500 text-xl">★ ★</span>
+            
           </div>
 
           {/* Rank Sleeve Patch Placeholder */}
@@ -64,17 +62,10 @@ export function ProfileCard({ profileData, onProfileUpdate }: ProfileCardProps) 
 
           {/* Action Buttons */}
           <div className="flex gap-3 mt-6">
-            <Button 
-              onClick={() => setIsEditDialogOpen(true)}
-              className="flex-1"
-            >
+            <Button onClick={() => setIsEditDialogOpen(true)} className="flex-1">
               EDIT PROFILE
             </Button>
-            <Button 
-              variant="outline"
-              onClick={handleUserHistory}
-              className="flex-1"
-            >
+            <Button variant="outline" onClick={handleUserHistory} className="flex-1">
               USER HISTORY
             </Button>
           </div>
@@ -93,12 +84,6 @@ export function ProfileCard({ profileData, onProfileUpdate }: ProfileCardProps) 
         </CardContent>
       </Card>
 
-      <EditProfileDialog
-        isOpen={isEditDialogOpen}
-        onClose={() => setIsEditDialogOpen(false)}
-        profileData={profileData}
-        onSave={onProfileUpdate}
-      />
-    </div>
-  )
+      <EditProfileDialog isOpen={isEditDialogOpen} onClose={() => setIsEditDialogOpen(false)} profileData={profileData} onSave={onProfileUpdate} />
+    </div>;
 }
