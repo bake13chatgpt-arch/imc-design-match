@@ -38,11 +38,11 @@ export function ProfileHeader({
   return <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
       {/* Profile Photo */}
       <div className="space-y-4">
-        <div className="relative w-48 h-48 mx-auto">
-          <div className="w-full h-full rounded-full border-2 border-dashed border-muted-foreground bg-card flex items-center justify-center overflow-hidden mx-[98px] my-0 py-px">
+        <div className="relative w-48 h-48 mx-auto my-0">
+          <div className="w-full h-full rounded-full border-2 border-dashed border-muted-foreground bg-card flex items-center justify-center overflow-hidden mx-[77px] py-0 my-[5px] px-[20px]">
             {profileImage ? <img src={profileImage} alt="Profile" className="w-full h-full object-cover" style={{
             transform: `translate(${imagePosition.x}px, ${imagePosition.y}px) scale(${imageScale})`
-          }} /> : <div className="text-center">
+          }} /> : <div className="text-center mx-0 my-0 py-0">
                 <Camera className="h-12 w-12 text-muted-foreground mx-auto mb-2" />
                 <p className="text-sm text-muted-foreground">Placeholder profile photo</p>
               </div>}
@@ -82,8 +82,8 @@ export function ProfileHeader({
       </div>
 
       {/* Statistics */}
-      <div className="md:col-span-2">
-        <div className="grid grid-cols-5 gap-4 text-center">
+      <div className="md:col-span-2 py-0 mx-0 px-0 my-0">
+        <div className="grid grid-cols-5 gap-4 text-center my-0 py-0">
           <div>
             <div className="text-sm text-muted-foreground mb-1 mx-[400px]">PLANES DOWNED</div>
             <div className="text-3xl font-bold mx-[400px]">{profileData.statistics.planesDownd}</div>
@@ -92,7 +92,7 @@ export function ProfileHeader({
             <div className="text-sm text-muted-foreground mb-1 mx-[500px]">GROUND TARGETS</div>
             <div className="text-3xl font-bold mx-[500px]">{profileData.statistics.groundTargets}</div>
           </div>
-          <div>
+          <div className="px-0 py-0">
             <div className="text-sm text-muted-foreground mb-1 mx-[600px]">SHIPS SUNK</div>
             <div className="text-3xl font-bold mx-[600px]">{profileData.statistics.shipsSunk}</div>
           </div>
@@ -100,7 +100,7 @@ export function ProfileHeader({
             <div className="text-sm text-muted-foreground mb-1 mx-[700px]">MISSIONS FLOWN</div>
             <div className="text-3xl font-bold mx-[700px]">{profileData.statistics.missionsFlown}</div>
           </div>
-          <div>
+          <div className="my-0 px-0 mx-0">
             <div className="text-sm text-muted-foreground mb-1 mx-[800px]">COMBAT HOURS</div>
             <div className="text-3xl font-bold mx-[800px]">{profileData.statistics.combatHours}</div>
           </div>

@@ -58,10 +58,8 @@ const Profiles = () => {
   }]);
   return <Layout>
       <div className="min-h-screen bg-background text-foreground p-6">
-        <div className="container mx-auto max-w-7xl bg-zinc-900">
-          <h1 className="text-4xl font-bold tracking-wider text-foreground mb-8 my-[86px] py-[40px]">
-            PROFILES
-          </h1>
+        <div className="container mx-auto max-w-7xl bg-zinc-900 py-0 my-0 px-[29px]">
+          <h1 className="tracking-wider text-foreground mb-8 font-medium text-2xl py-[70px] my-0 mx-[121px]">PROFILE</h1>
           
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Left Column - Profile Info */}
@@ -71,7 +69,7 @@ const Profiles = () => {
             </div>
 
             {/* Right Column - Timeline */}
-            <div className="lg:col-span-2">
+            <div className="lg:col-span-2 px-0 my-0 mx-[3px]">
               <ProfileTimeline events={timelineEvents} onEventsUpdate={setTimelineEvents} />
             </div>
           </div>
