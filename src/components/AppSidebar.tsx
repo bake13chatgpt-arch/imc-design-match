@@ -28,9 +28,9 @@ const items = [{
 }];
 export function AppSidebar() {
   return <Sidebar className="border-r-0 w-64 shadow-2xl" variant="sidebar">
-      <SidebarContent className="border-r border-border rounded-none bg-zinc-900">
+      <SidebarContent className="border-r border-border rounded-none bg-zinc-900 mx-0">
         <SidebarGroup>
-          <SidebarGroupLabel className="text-foreground font-bold text-lg mb-4 px-4 bg-zinc-800">
+          <SidebarGroupLabel className="text-foreground font-bold text-lg mb-4 px-4 bg-zinc-800/0">
             MENU
           </SidebarGroupLabel>
           <SidebarGroupContent>

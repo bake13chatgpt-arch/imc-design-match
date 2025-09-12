@@ -57,8 +57,8 @@ const Profiles = () => {
     result: "Success"
   }]);
   return <Layout>
-      <div className="min-h-screen bg-background text-foreground p-6">
-        <div className="container mx-auto max-w-7xl bg-zinc-900 py-0 my-0 px-[29px]">
+      <div className="min-h-screen bg-background text-foreground p-6 py-0 px-0 mx-0 my-0">
+        <div className="container max-w-7xl bg-zinc-900 my-0 py-[2px] px-[41px] mx-[238px]">
           <h1 className="tracking-wider text-foreground mb-8 font-medium text-2xl py-[70px] my-0 mx-[121px]">PROFILE</h1>
           
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">

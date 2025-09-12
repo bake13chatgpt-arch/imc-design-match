@@ -66,10 +66,10 @@ export function ProfileTimeline({
     };
     onEventsUpdate([event, ...events]);
   };
-  return <div className="space-y-6 mx-0 my-0 px-0 py-[34px]">
+  return <div className="space-y-6 my-0 px-0 mx-[15px] py-[54px]">
       {/* Timeline Header */}
       <div className="flex items-center justify-between my-[73px] py-[22px] mx-0 px-[11px]">
-        <h2 className="text-xl font-bold mx-[19px] px-0 py-[22px] my-0">Timeline</h2>
+        <h2 className="text-xl font-bold my-0 mx-0 py-0 px-px">Timeline</h2>
         <Button onClick={() => setIsAddEventOpen(true)} className="px-[22px] my-[5px] py-0 mx-[47px]">
           <Plus className="h-4 w-4 mr-2" />
           Add new event
